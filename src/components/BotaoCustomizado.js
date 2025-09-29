@@ -10,14 +10,14 @@ export default function BotaoCustomizado({ titulo }) {
  
 const styles = StyleSheet.create({
   botao: {
-    backgroundColor: '#E2725B',
+    backgroundColor: '#ff6b35',
     padding: 10,
     borderRadius: 8,
     width: 150,
     alignItems: 'center',
   },
   textoBotao: {
-    color: '#2E2B2B',
+    color: '#2e1c1c',
     fontSize: 16,
     fontFamily: 'sans-serif',
     fontWeight: '600'

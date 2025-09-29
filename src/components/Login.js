@@ -7,11 +7,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',    // centraliza verticalmente
         alignItems: 'center',        // centraliza horizontalmente
         padding: 20,
-        backgroundColor: '#fff',
+        backgroundColor: '#d6ecfa',
     },
     logo:{
         width: 400,
         height: 400,
+        marginBottom: 30
     },
     cpf:{
        color: '#999999',
@@ -24,6 +25,7 @@ const styles = StyleSheet.create({
        marginVertical: 15,
        fontSize: 16,
        backgroundColor: '#fff',
+
         
     },
     senha:{
@@ -39,7 +41,8 @@ const styles = StyleSheet.create({
        backgroundColor: '#fff',
     },
     cardBotao:{
-
+        marginTop: 15,
+         marginBottom: 30
     }
     
 
