@@ -1,8 +1,8 @@
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
  
-export default function BotaoCustomizado({ titulo }) {
+export default function BotaoCustomizado({ titulo, onApertar }) {
   return (
-    <TouchableOpacity style={styles.botao}>
+    <TouchableOpacity style={styles.botao} onPress={onApertar}>
       <Text style={styles.textoBotao}>{titulo}</Text>
     </TouchableOpacity>
   );

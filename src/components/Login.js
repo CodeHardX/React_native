@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { Image, StyleSheet, TextInput, View } from 'react-native';
 import BotaoCustomizado from './BotaoCustomizado';
 
 const styles = StyleSheet.create({
+
     container:{
         flex: 1,
         justifyContent: 'center',    // centraliza verticalmente
@@ -49,6 +51,15 @@ const styles = StyleSheet.create({
 });
 
 export default function Login() {
+    
+    const [cpf, setCpf] = useState('');
+    const [senha, setSenha] = useState('');
+
+     const handleLogin = () => {
+        alert(`Cpf: ${cpf}\n Senha: ${senha}`);
+    };
+
+    
     return(
         <View style={styles.container}>
                 <Image source={require('../img/logoG.png')} style={styles.logo}/>
@@ -57,14 +68,21 @@ export default function Login() {
                 <TextInput 
                 style={styles.cpf}
                 placeholder='Digite seu CPF'
+                value={cpf}
+                onChangeText={setCpf}
+                keyboardType="number-pad"
+                maxLength={14} 
                 />            
                 <TextInput 
                 style={styles.senha} 
                 placeholder='Digite sua Senha'
+                value={senha}
+                onChangeText={setSenha}
+                secureTextEntry={true}
                 />
             </View>
             <View style={styles.cardBotao}>
-                <BotaoCustomizado titulo='Entrar'/>
+                <BotaoCustomizado titulo='Entrar' onApertar={handleLogin}/>
             </View>
 
         </View>
