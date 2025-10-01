@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { Image, StyleSheet, TextInput, View } from 'react-native';
-import BotaoCustomizado from './BotaoCustomizado';
-
-
+import BotaoCustomizado from '../components/BotaoCustomizado';
 const styles = StyleSheet.create({
 
     container:{
@@ -51,16 +49,17 @@ const styles = StyleSheet.create({
 
 });
 
-export default function Login() {
-    
+
+export default function LoginScreen({ navigation }) {
     const [cpf, setCpf] = useState('');
     const [senha, setSenha] = useState('');
 
-     const handleLogin = () => {
+    const handleLogin = () => {
         alert(`Cpf: ${cpf}\n Senha: ${senha}`);
+        navigation.navigate('Home');
+
     };
 
-    
     return(
         <View style={styles.container}>
                 <Image source={require('../img/logoG.png')} style={styles.logo}/>
