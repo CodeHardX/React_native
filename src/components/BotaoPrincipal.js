@@ -1,9 +1,10 @@
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default function BotaoPrincipal({onApertar}){
     return(
         <TouchableOpacity style={styles.botao} onPress={onApertar}>
-            <Text style={styles.textoBotao}>Entrar</Text>
+           <Icon name="home" size={20} color="white" style={styles.icone} />
         </TouchableOpacity>
     );
 }
